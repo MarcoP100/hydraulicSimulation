@@ -1,0 +1,26 @@
+FROM ubuntu:20.04
+
+# Imposta il frontend non interattivo per evitare richieste durante l'installazione dei pacchetti
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Installa dipendenze e strumenti necessari
+RUN apt-get update && \
+    apt-get install -y ca-certificates curl gnupg
+
+# Aggiungi la chiave GPG e il repository di OpenModelica
+RUN curl -fsSL http://build.openmodelica.org/apt/openmodelica.asc | gpg --dearmor -o /usr/share/keyrings/openmodelica-keyring.gpg && \
+    echo "deb [arch=arm64 signed-by=/usr/share/keyrings/openmodelica-keyring.gpg] https://build.openmodelica.org/apt $(cat /etc/os-release | grep "\(UBUNTU\\|DEBIAN\\|VERSION\)_CODENAME" | sort | cut -d= -f 2 | head -1) stable" | tee /etc/apt/sources.list.d/openmodelica.list
+
+# Aggiorna i pacchetti e installa OpenModelica
+RUN apt-get update && \
+    apt-get install -y openmodelica x11-apps
+
+# Configura il display per la GUI
+ENV DISPLAY=host.docker.internal:0.0
+
+# Permetti le connessioni X11 (questo potrebbe essere necessario a seconda della configurazione)
+RUN echo "export DISPLAY=\$DISPLAY" >> ~/.bashrc
+RUN echo "xhost +local:" >> ~/.bashrc
+
+# Comando di default per avviare una shell
+CMD ["bash"]

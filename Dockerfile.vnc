@@ -1,0 +1,40 @@
+FROM ubuntu:20.04
+
+# Imposta il frontend non interattivo per evitare richieste durante l'installazione dei pacchetti
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Installa dipendenze e strumenti necessari
+RUN apt-get update && \
+    apt-get install -y ca-certificates curl gnupg
+
+# Aggiungi la chiave GPG e il repository di OpenModelica
+RUN curl -fsSL http://build.openmodelica.org/apt/openmodelica.asc | gpg --dearmor -o /usr/share/keyrings/openmodelica-keyring.gpg && \
+    echo "deb [arch=arm64 signed-by=/usr/share/keyrings/openmodelica-keyring.gpg] https://build.openmodelica.org/apt $(cat /etc/os-release | grep "\(UBUNTU\\|DEBIAN\\|VERSION\)_CODENAME" | sort | cut -d= -f 2 | head -1) stable" | tee /etc/apt/sources.list.d/openmodelica.list
+
+# Aggiorna i pacchetti e installa OpenModelica
+RUN apt-get update && \
+    apt-get install -y openmodelica \
+    xfce4 \
+    xfce4-goodies \
+    tightvncserver
+
+ENV USER=root
+
+# Configurare VNC
+RUN mkdir -p ~/.vnc \
+    && echo "marco123" | vncpasswd -f > ~/.vnc/passwd \
+    && chmod 600 ~/.vnc/passwd
+
+# Creare il file xstartup per VNC
+RUN echo -e '#!/bin/bash\nstartxfce4 &' > ~/.vnc/xstartup \
+    && chmod +x ~/.vnc/xstartup
+
+# Esporre la porta 5901
+EXPOSE 5901
+
+# Copiare lo script di avvio nel contenitore
+COPY start_vnc.sh /start_vnc.sh
+RUN chmod +x /start_vnc.sh
+
+# Comando per avviare lo script di avvio
+CMD ["/start_vnc.sh"]
