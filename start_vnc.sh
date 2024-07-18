@@ -28,7 +28,7 @@ else
     # Rimuovi il file di lock se esiste
     if [ -f /tmp/.X1-lock ]; then
         echo "Rimuovo /tmp/.X1-lock"
-        rm -f /tmp/.X1-lock
+        sudo rm -f /tmp/.X1-lock
         echo "/tmp/.X1-lock rimosso."
     else
         echo "/tmp/.X1-lock non trovato."
@@ -36,7 +36,7 @@ else
 
     if [ -f /tmp/.X11-unix/X1 ]; then
         echo "Rimuovo /tmp/.X11-unix/X1"
-        rm -f /tmp/.X11-unix/X1
+        sudo rm -f /tmp/.X11-unix/X1
         echo "/tmp/.X11-unix/X1 rimosso."
     else
         echo "/tmp/.X11-unix/X1 non trovato."
@@ -53,7 +53,7 @@ else
 fi
 
 # Verifica se il server VNC è in esecuzione
-ps aux | grep vnc
+#ps aux | grep vnc
 
 # Mantieni il contenitore in esecuzione
-tail -f /dev/null
+#tail -f /dev/null
