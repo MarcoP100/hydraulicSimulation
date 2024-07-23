@@ -1,1 +1,8 @@
 *.pub
+__pycache__
+myenv
+dockerenv
+FMPy
+fmPy_docker
+omPythonEnv
+raspenv

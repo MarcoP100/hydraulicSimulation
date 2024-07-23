@@ -1,3 +1,4 @@
+within Simulation;
 model linearGradient
   input Real startTime "Tempo di inizio della rampa";
   input Real endTime "Tempo di fine della rampa";

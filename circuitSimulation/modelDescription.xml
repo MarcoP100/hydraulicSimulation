@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+  fmiVersion="2.0"
+  modelName="Simulation"
+  guid="{eff6f89e-94fc-45b2-8d2d-f8c17daaed16}"
+  description=""
+  generationTool="OpenModelica Compiler OpenModelica 1.23.1"
+  generationDateAndTime="2024-07-19T19:00:35Z"
+  variableNamingConvention="structured"
+  numberOfEventIndicators="4">
+  <ModelExchange
+    modelIdentifier="Simulation">
+    <SourceFiles>
+      <File name="Simulation.c" />
+      <File name="Simulation_functions.c" />
+      <File name="Simulation_records.c" />
+      <File name="Simulation_01exo.c" />
+      <File name="Simulation_02nls.c" />
+      <File name="Simulation_03lsy.c" />
+      <File name="Simulation_04set.c" />
+      <File name="Simulation_05evt.c" />
+      <File name="Simulation_06inz.c" />
+      <File name="Simulation_07dly.c" />
+      <File name="Simulation_08bnd.c" />
+      <File name="Simulation_09alg.c" />
+      <File name="Simulation_10asr.c" />
+      <File name="Simulation_11mix.c" />
+      <File name="Simulation_12jac.c" />
+      <File name="Simulation_13opt.c" />
+      <File name="Simulation_14lnz.c" />
+      <File name="Simulation_15syn.c" />
+      <File name="Simulation_16dae.c" />
+      <File name="Simulation_17inl.c" />
+      <File name="Simulation_18spd.c" />
+      <File name="Simulation_init_fmu.c" />
+      <File name="Simulation_FMU.c" />
+      <File name="./gc/memory_pool.c" />
+      <File name="./gc/omc_gc.c" />
+      <File name="./util/base_array.c" />
+      <File name="./util/boolean_array.c" />
+      <File name="./util/context.c" />
+      <File name="./util/division.c" />
+      <File name="./util/doubleEndedList.c" />
+      <File name="./util/generic_array.c" />
+      <File name="./util/index_spec.c" />
+      <File name="./util/integer_array.c" />
+      <File name="./util/list.c" />
+      <File name="./util/modelica_string_lit.c" />
+      <File name="./util/modelica_string.c" />
+      <File name="./util/ModelicaUtilities.c" />
+      <File name="./util/omc_error.c" />
+      <File name="./util/omc_file.c" />
+      <File name="./util/omc_init.c" />
+      <File name="./util/omc_mmap.c" />
+      <File name="./util/omc_msvc.c" />
+      <File name="./util/omc_numbers.c" />
+      <File name="./util/parallel_helper.c" />
+      <File name="./util/rational.c" />
+      <File name="./util/real_array.c" />
+      <File name="./util/ringbuffer.c" />
+      <File name="./util/simulation_options.c" />
+      <File name="./util/string_array.c" />
+      <File name="./util/utility.c" />
+      <File name="./util/varinfo.c" />
+      <File name="./math-support/pivot.c" />
+      <File name="./simulation/jacobian_util.c" />
+      <File name="./simulation/omc_simulation_util.c" />
+      <File name="./simulation/options.c" />
+      <File name="./simulation/simulation_info_json.c" />
+      <File name="./simulation/simulation_omc_assert.c" />
+      <File name="./simulation/solver/delay.c" />
+      <File name="./simulation/solver/fmi_events.c" />
+      <File name="./simulation/solver/model_help.c" />
+      <File name="./simulation/solver/omc_math.c" />
+      <File name="./simulation/solver/spatialDistribution.c" />
+      <File name="./simulation/solver/stateset.c" />
+      <File name="./simulation/solver/synchronous.c" />
+      <File name="./simulation/solver/initialization/initialization.c" />
+      <File name="./meta/meta_modelica_catch.c" />
+    </SourceFiles>
+  </ModelExchange>
+  <CoSimulation
+    modelIdentifier="Simulation"
+    needsExecutionTool="false"
+    canHandleVariableCommunicationStepSize="true"
+    canInterpolateInputs="true"
+    maxOutputDerivativeOrder="1"
+    canRunAsynchronuously = "false"
+    canBeInstantiatedOnlyOncePerProcess="false"
+    canNotUseMemoryManagementFunctions="false"
+    canGetAndSetFMUstate="false"
+    canSerializeFMUstate="false"
+    providesDirectionalDerivative="false">
+    <SourceFiles>
+      <File name="Simulation.c" />
+      <File name="Simulation_functions.c" />
+      <File name="Simulation_records.c" />
+      <File name="Simulation_01exo.c" />
+      <File name="Simulation_02nls.c" />
+      <File name="Simulation_03lsy.c" />
+      <File name="Simulation_04set.c" />
+      <File name="Simulation_05evt.c" />
+      <File name="Simulation_06inz.c" />
+      <File name="Simulation_07dly.c" />
+      <File name="Simulation_08bnd.c" />
+      <File name="Simulation_09alg.c" />
+      <File name="Simulation_10asr.c" />
+      <File name="Simulation_11mix.c" />
+      <File name="Simulation_12jac.c" />
+      <File name="Simulation_13opt.c" />
+      <File name="Simulation_14lnz.c" />
+      <File name="Simulation_15syn.c" />
+      <File name="Simulation_16dae.c" />
+      <File name="Simulation_17inl.c" />
+      <File name="Simulation_18spd.c" />
+      <File name="Simulation_init_fmu.c" />
+      <File name="Simulation_FMU.c" />
+      <File name="./gc/memory_pool.c" />
+      <File name="./gc/omc_gc.c" />
+      <File name="./util/base_array.c" />
+      <File name="./util/boolean_array.c" />
+      <File name="./util/context.c" />
+      <File name="./util/division.c" />
+      <File name="./util/doubleEndedList.c" />
+      <File name="./util/generic_array.c" />
+      <File name="./util/index_spec.c" />
+      <File name="./util/integer_array.c" />
+      <File name="./util/list.c" />
+      <File name="./util/modelica_string_lit.c" />
+      <File name="./util/modelica_string.c" />
+      <File name="./util/ModelicaUtilities.c" />
+      <File name="./util/omc_error.c" />
+      <File name="./util/omc_file.c" />
+      <File name="./util/omc_init.c" />
+      <File name="./util/omc_mmap.c" />
+      <File name="./util/omc_msvc.c" />
+      <File name="./util/omc_numbers.c" />
+      <File name="./util/parallel_helper.c" />
+      <File name="./util/rational.c" />
+      <File name="./util/real_array.c" />
+      <File name="./util/ringbuffer.c" />
+      <File name="./util/simulation_options.c" />
+      <File name="./util/string_array.c" />
+      <File name="./util/utility.c" />
+      <File name="./util/varinfo.c" />
+      <File name="./math-support/pivot.c" />
+      <File name="./simulation/jacobian_util.c" />
+      <File name="./simulation/omc_simulation_util.c" />
+      <File name="./simulation/options.c" />
+      <File name="./simulation/simulation_info_json.c" />
+      <File name="./simulation/simulation_omc_assert.c" />
+      <File name="./simulation/solver/delay.c" />
+      <File name="./simulation/solver/fmi_events.c" />
+      <File name="./simulation/solver/model_help.c" />
+      <File name="./simulation/solver/omc_math.c" />
+      <File name="./simulation/solver/spatialDistribution.c" />
+      <File name="./simulation/solver/stateset.c" />
+      <File name="./simulation/solver/synchronous.c" />
+      <File name="./simulation/solver/initialization/initialization.c" />
+      <File name="./meta/meta_modelica_catch.c" />
+    </SourceFiles>
+  </CoSimulation>
+  <LogCategories>
+    <Category name="logEvents" />
+    <Category name="logSingularLinearSystems" />
+    <Category name="logNonlinearSystems" />
+    <Category name="logDynamicStateSelection" />
+    <Category name="logStatusWarning" />
+    <Category name="logStatusDiscard" />
+    <Category name="logStatusError" />
+    <Category name="logStatusFatal" />
+    <Category name="logStatusPending" />
+    <Category name="logAll" />
+    <Category name="logFmi2Call" />
+  </LogCategories>
+  <DefaultExperiment startTime="0.0" stopTime="1.0" tolerance="1e-6" stepSize="0.002"/>
+  <ModelVariables>
+  <!-- Index of variable = "1" -->
+  <ScalarVariable
+    name="solenoid.i_A"
+    valueReference="0"
+    initial="exact">
+    <Real start="0.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "2" -->
+  <ScalarVariable
+    name="der(solenoid.i_A)"
+    valueReference="1"
+    >
+    <Real derivative="1"/>
+  </ScalarVariable>
+  <!-- Index of variable = "3" -->
+  <ScalarVariable
+    name="currentFeedback"
+    valueReference="2"
+    causality="output"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "4" -->
+  <ScalarVariable
+    name="dutyCycle"
+    valueReference="3"
+    causality="input"
+    >
+    <Real start="0.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "5" -->
+  <ScalarVariable
+    name="pwm.duty"
+    valueReference="4"
+    description="Duty cycle del PWM (0-1)"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "6" -->
+  <ScalarVariable
+    name="pwm.pwm_rif"
+    valueReference="5"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "7" -->
+  <ScalarVariable
+    name="solenoid.R_act"
+    valueReference="6"
+    description="resistenza alla temperatura attuale in ohm "
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "8" -->
+  <ScalarVariable
+    name="solenoid.Temp_act"
+    valueReference="7"
+    description="temperatura attuale in °C"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "9" -->
+  <ScalarVariable
+    name="solenoid.V_v"
+    valueReference="8"
+    description="Tensione applicata (volt)"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "10" -->
+  <ScalarVariable
+    name="L"
+    valueReference="9"
+    description="Induttanza in Henry"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="0.1"/>
+  </ScalarVariable>
+  <!-- Index of variable = "11" -->
+  <ScalarVariable
+    name="R_rif"
+    valueReference="10"
+    description="Resistenza in Ohm"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="3.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "12" -->
+  <ScalarVariable
+    name="Temp_rif"
+    valueReference="11"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="20.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "13" -->
+  <ScalarVariable
+    name="Vdc"
+    valueReference="12"
+    description="Tensione di alimentazione in Volt"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="24.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "14" -->
+  <ScalarVariable
+    name="coeff"
+    valueReference="13"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="0.0043"/>
+  </ScalarVariable>
+  <!-- Index of variable = "15" -->
+  <ScalarVariable
+    name="endTime"
+    valueReference="14"
+    description="Tempo di fine della rampa"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="60.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "16" -->
+  <ScalarVariable
+    name="endValue"
+    valueReference="15"
+    description="Valore finale della rampa"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="130.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "17" -->
+  <ScalarVariable
+    name="freq"
+    valueReference="16"
+    description="Frequenza del PWM in Hz"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="200.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "18" -->
+  <ScalarVariable
+    name="pwm.Vdc"
+    valueReference="17"
+    description="Tensione di alimentazione in Volt"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "19" -->
+  <ScalarVariable
+    name="pwm.freq"
+    valueReference="18"
+    description="Frequenza del PWM in Hz"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "20" -->
+  <ScalarVariable
+    name="rampaTemperatura.endTime"
+    valueReference="19"
+    description="Tempo di fine della rampa"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "21" -->
+  <ScalarVariable
+    name="rampaTemperatura.endValue"
+    valueReference="20"
+    description="Valore finale della rampa"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "22" -->
+  <ScalarVariable
+    name="rampaTemperatura.startTime"
+    valueReference="21"
+    description="Tempo di inizio della rampa"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "23" -->
+  <ScalarVariable
+    name="rampaTemperatura.startValue"
+    valueReference="22"
+    description="Valore iniziale della rampa"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "24" -->
+  <ScalarVariable
+    name="solenoid.L"
+    valueReference="23"
+    description="Induttanza in Henry"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "25" -->
+  <ScalarVariable
+    name="solenoid.R_rif"
+    valueReference="24"
+    description="Resistenza in Ohm alla temp di riferimento"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "26" -->
+  <ScalarVariable
+    name="solenoid.Temp_rif"
+    valueReference="25"
+    description=" temperatura di riferimento in °C"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "27" -->
+  <ScalarVariable
+    name="solenoid.coeff"
+    valueReference="26"
+    description="coefficiente termico "
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "28" -->
+  <ScalarVariable
+    name="startTime"
+    valueReference="27"
+    description="Tempo di inizio della rampa"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="5.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "29" -->
+  <ScalarVariable
+    name="startValue"
+    valueReference="28"
+    description="Valore iniziale della rampa"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="20.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "30" -->
+  <ScalarVariable
+    name="pwm.V_volt"
+    valueReference="8"
+    description="Tensione generata"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "31" -->
+  <ScalarVariable
+    name="rampaTemperatura.ramp"
+    valueReference="7"
+    description="Segnale rampa"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "32" -->
+  <ScalarVariable
+    name="solenoid.i_mA"
+    valueReference="2"
+    description="Corrente attraverso il solenoide (mA)"
+    >
+    <Real/>
+  </ScalarVariable>
+  </ModelVariables>
+  <ModelStructure>
+    <Outputs>
+      <Unknown index="3" dependencies="1" dependenciesKind="dependent" />
+    </Outputs>
+    <Derivatives>
+      <Unknown index="2" dependencies="1 4" dependenciesKind="dependent dependent" />
+    </Derivatives>
+    <InitialUnknowns>
+      <Unknown index="2" dependencies="1 4 10 11 12 13 14 15 16 17 28 29" dependenciesKind="dependent dependent dependent dependent dependent dependent dependent dependent dependent dependent dependent dependent" />
+      <Unknown index="3" dependencies="1" dependenciesKind="dependent" />
+      <Unknown index="18" dependencies="13" dependenciesKind="dependent" />
+      <Unknown index="19" dependencies="17" dependenciesKind="dependent" />
+      <Unknown index="20" dependencies="15" dependenciesKind="dependent" />
+      <Unknown index="21" dependencies="16" dependenciesKind="dependent" />
+      <Unknown index="22" dependencies="28" dependenciesKind="dependent" />
+      <Unknown index="23" dependencies="29" dependenciesKind="dependent" />
+      <Unknown index="24" dependencies="10" dependenciesKind="dependent" />
+      <Unknown index="25" dependencies="11" dependenciesKind="dependent" />
+      <Unknown index="26" dependencies="12" dependenciesKind="dependent" />
+      <Unknown index="27" dependencies="14" dependenciesKind="dependent" />
+    </InitialUnknowns>
+  </ModelStructure>
+</fmiModelDescription>

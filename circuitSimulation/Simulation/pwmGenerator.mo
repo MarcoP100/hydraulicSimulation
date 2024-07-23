@@ -1,3 +1,4 @@
+within Simulation;
 model pwmGenerator
   input Real Vdc "Tensione di alimentazione in Volt";
   input Real freq "Frequenza del PWM in Hz";

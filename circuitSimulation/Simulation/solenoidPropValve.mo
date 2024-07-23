@@ -1,3 +1,4 @@
+within Simulation;
 model solenoidPropValve
   // Parametri del solenoide
   input Real L "Induttanza in Henry";
@@ -7,10 +8,12 @@ model solenoidPropValve
   input Real coeff "coefficiente termico ";
   input Real Temp_act "temperatura attuale in °C";
   
-  output Real i_mA "Corrente attraverso il solenoide (mA)";
+  //output Real i_mA "Corrente attraverso il solenoide (mA)";
    
   Real R_act "resistenza alla temperatura attuale in ohm ";
   Real i_A;
+  
+  output Real i_mA;
 equation
   // calcolo resistenza 
   R_act = R_rif * (1 + coeff * (Temp_act - Temp_rif));
